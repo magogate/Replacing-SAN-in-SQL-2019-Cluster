@@ -13,7 +13,8 @@ In last few videos we had seen how to confirgure Active - Active SQL 2019 cluste
 In this video series, we will see how to analyze and metigate the impact, if we had to replace the SAN device in our data center.
 
 ## What's needed to replicate this
-1. You would need 3 VMS
+#### SQL 2019 & Win 2019 
+  - To form Win 2019 Cluster and after that SQL 2019 cluster, you would need corresponding softwares. You can find those details in my prior videos.
+#### You would need 3 VMS
   - As shown in Image, 1st VM will act as Domain Controller as well as SAN. Since we can't afford to have a SAN, we have to utilize our VM as SAN.
   - 2 VMs for failover. Note, we have to confirgure Active / Passive SQL 2019 cluster - unlike prior Active / Active cluster
-3. 
