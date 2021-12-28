@@ -28,13 +28,13 @@ In this video series, we will see how to analyze and metigate the impact, if we 
       - quorum2 (1.5 GB)
       - data02 (5 GB)
       - log02 (4 GB)
-   7. Specify Disk Size
-   8. Add to an existing iSCSI target if not available new
-   9. Repeat process for all 3 drives which needs to be added
+   6. Specify Disk Size
+   7. Add to an existing iSCSI target if not available new
+   8. Repeat process for all 3 drives which needs to be added
 
 ## Configuring Shared Drives on gogate-node-1 & gogate-node-2
   1. Open "iSCSI initiator"
-  2. Specify target - 10.0.0.10
+  2. Specify target - 10.0.0.10 if not already connected. In our case its already connected.
   3. Click on Volumes & Devices --> Auto Configure
   4. To format disk - Open "Disk Management"
   5. Select disks and make online (Right click on each disk)
@@ -42,6 +42,9 @@ In this video series, we will see how to analyze and metigate the impact, if we 
   7. Select "GPT - GUID Partition Table" --> 
   8. Click on Drive (once its online) & click "New Simple Volume"
   9. Specify Drive Letter
+     - X for Quorum
+     - Y for Data02
+     - Z for Log02
   10. Specify following settings
     - File System - NTFS
      - Allocation Unit Size -- 64 KB (https://blog.sqlserveronline.com/2017/12/08/sql-server-64kb-allocation-unit-size/)
@@ -51,7 +54,7 @@ In this video series, we will see how to analyze and metigate the impact, if we 
   11. Repeat same for all available drives
   12. Once node-1 configuration is finished, make all drives offline
   13. Open "iSCSI Initiator" on 2nd node
-  14. Specify target - 10.0.0.10
+  14. Specify target - 10.0.0.10 (If its not connected already, in our case its already connected)
   15. Click on Volumes & Devices --> Auto Configure
   16. Open "Disk Management"
   17. Select disks and make online (Right click on each disk)
