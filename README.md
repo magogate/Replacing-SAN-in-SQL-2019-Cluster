@@ -24,13 +24,14 @@ In this video series, we will see how to analyze and metigate the impact, if we 
    2. Select "File & Storage Services"
    3. Select "iSCSI"
    4. Tasks --> "New iSCSI Virtual Disk"
-   5. Specify Disk Name
+   5. Change the folder - C:\iSCASI_SAN2
+   6. Specify Disk Name
       - quorum2 (1.5 GB)
       - data02 (5 GB)
       - log02 (4 GB)
-   6. Specify Disk Size
-   7. Add to an existing iSCSI target if not available new
-   8. Repeat process for all 3 drives which needs to be added
+   7. Specify Disk Size
+   8. Add to an existing iSCSI target if not available new
+   9. Repeat process for all 3 drives which needs to be added
 
 ## Configuring Shared Drives on gogate-node-1 & gogate-node-2
   1. Open "iSCSI initiator"
