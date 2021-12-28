@@ -64,7 +64,7 @@ In this video series, we will see how to analyze and metigate the impact, if we 
 ## Adding storage to Windows Failover Cluster - Available Storage
   1. Once disks are configured on both Node1 & Node2, next step is to add them into Win Failover Cluster
   2. Make sure both Node1 and Node2 are running
-  3. Go to Failover Cluster Manager --> click on "Add Disk"
+  3. Go to Failover Cluster Manager --> Storage --> Disk --> click on "Add Disk"
   4. Newly added 3 disks will appear as "Available Storage"
   
 ## Adding storage to SQL Failover Cluster
