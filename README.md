@@ -9,7 +9,7 @@ How to replace Storage Area Network (SAN) in SQL 2019 Cluster Environment
 <img src="ActiveActiveSQLCluster.gif" alt="SQL Cluster">
 
 # Intruduction
-In last few videos we had seen how to confirgure Active - Active SQL 2019 cluster. In this video series, we will see what if we have to replace a SAN(https://www.snia.org/education/storage_networking_primer/san/what_san) device? Most of the SANs available had to replace in 4-5 years. Since our SQL Cluster is dependant on these SAN devices, if there is a change in SAN storage, there will be a change in SQL Cluster as well.
+In last few videos we had seen how to confirgure Active - Active SQL 2019 cluster. In this video series, we will see what if we have to replace a [SAN] (https://www.snia.org/education/storage_networking_primer/san/what_san) device? Most of the SANs available had to replace in 4-5 years. Since our SQL Cluster is dependant on these SAN devices, if there is a change in SAN storage, there will be a change in SQL Cluster as well.
 In this video series, we will see how to analyze and metigate the impact, if we had to replace the SAN device in our data center.
 
 ## What's needed to replicate this
