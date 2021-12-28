@@ -61,6 +61,24 @@ In this video series, we will see how to analyze and metigate the impact, if we 
   17. Select disks and make online (Right click on each disk)
   18. Right click on each drive --> Select "Change Drive Letter" & match it exactly what we had given for Node1
 
+## Adding storage to Windows Failover Cluster - Available Storage
+  1. Once disks are configured on both Node1 & Node2, next step is to add them into Win Failover Cluster
+  2. Make sure both Node1 and Node2 are running
+  3. Go to Failover Cluster Manager --> click on "Add Disk"
+  4. Newly added 3 disks will appear as "Available Storage"
+  
+## Adding storage to SQL Failover Cluster
+  1. Open Failoever Cluster Manager
+  2. Click on Roles --> go to Resources tab
+  3. Select SQL Server (SQL2019) resource and at right panel click on "Add Storage"
+  4. Remaining 3 drives will get added as part of SQL 2019 cluster
+  5. Once they are part of Win Failover Cluster, select "SQL Server (SQL2019) resource --> Properties
+  6. New window will get open, click on Dependancies tab --> add newly created 3 disks as dependancies
+
+## How to test if disks are part of SQL Cluster
+  1. Bring down newly added disk
+  2. if SQL Server service goes down, then newly added disk is part of SQL Cluster
+
 ## Removing depedancy from SAN1 to SAN2
   There are following different components of SQL2019 Cluster which are dependant on SAN
   1. MDF & LDF files of User databases
