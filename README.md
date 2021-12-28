@@ -29,5 +29,5 @@ In this video series, we will see how to analyze and metigate the impact, if we 
       - data02 (5 GB)
       - log02 (4 GB)
    7. Specify Disk Size
-   8. Add Target IP Address 10.0.0.15 & 10.0.0.20
-   9. Repeat process for all drives which needs to be added
+   8. Add to an existing iSCSI target if not available new
+   9. Repeat process for all 3 drives which needs to be added
