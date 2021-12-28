@@ -59,3 +59,14 @@ In this video series, we will see how to analyze and metigate the impact, if we 
   16. Open "Disk Management"
   17. Select disks and make online (Right click on each disk)
   18. Right click on each drive --> Select "Change Drive Letter" & match it exactly what we had given for Node1
+
+## Removing depedancy from SAN1 to SAN2
+  There are following different components of SQL2019 Cluster which are dependant on SAN
+  1. MDF & LDF files of User databases
+  2. MDF & LDF files of System databases (excluding master database)
+  3. MDF & LDF files of master database
+  4. SQL Log file path
+  5. SQLAgent.out log file
+  6. Quorum drive
+  7. Old drive dependancies
+  
