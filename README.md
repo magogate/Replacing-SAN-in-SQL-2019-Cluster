@@ -107,12 +107,12 @@ In this video series, we will see how to analyze and metigate the impact, if we 
       ``` 
         ALTER DATABASE HR
         MODIFY FILE ( NAME = HR,
-        FILENAME = 'F:\MSSQL\SQLData\HR.mdf');
+        FILENAME = 'Y:\MSSQL\DATA\HR.mdf');
         GO
     
         ALTER DATABASE HR
-        MODIFY FILE ( NAME = HR,
-        FILENAME = 'F:\MSSQL\SQLLog\HR.ldf');
+        MODIFY FILE ( NAME = HR_log,
+        FILENAME = 'Z:\MSSQL\LOG\HR_log.ldf');
         GO      
       ```
   3. Bring database offline
