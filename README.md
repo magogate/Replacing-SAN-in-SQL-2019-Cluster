@@ -127,4 +127,6 @@ In this video series, we will see how to analyze and metigate the impact, if we 
         ALTER DATABASE HR SET ONLINE;
         GO
       ```  
-      
+
+### 2. Changing MDF & LDF files of System Databases (excluding master)
+  Follow exact same steps which we did for User databases, but since we can't take individual databases offline, we have to re-start the service. Note - There will be a downtime due to this activity.
