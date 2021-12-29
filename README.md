@@ -175,3 +175,4 @@ In this video series, we will see how to analyze and metigate the impact, if we 
         -eZ:\MSSQL\LOG\ERRORLOG
         -lZ:\MSSQL\LOG\mastlog.ldf
       ```
+   8. Change the Default Location of MDF and LDF files
