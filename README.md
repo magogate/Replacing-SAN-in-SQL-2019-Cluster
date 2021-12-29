@@ -89,7 +89,7 @@ In this video series, we will see how to analyze and metigate the impact, if we 
   6. Quorum drive
   7. Old drive dependancies
   
-#### Changing MDF & LDF files of User Databases
+### 1. Changing MDF & LDF files of User Databases
   1. Find out logical file name and path of existing database
      ``` 
         SELECT  DatabaseName = d.name
