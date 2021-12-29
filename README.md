@@ -187,3 +187,11 @@ In this video series, we will see how to analyze and metigate the impact, if we 
   7. Go to Dependancy tab - and remove disk which are not needed anymore
   8. Now, try to take Shared Disks offline, and all should work.
   9. Once offline, right click on the disk --> Remove it from SQL Server (SQL2019)
+
+### 5. SQLAGENT.OUT
+  1. After taking Shared Disks offline, SQL Server service did not go down, rather all services on SQL Cluster were working fine
+  2. However, try restarting SQL Server Agent service now. It will fail.
+  3. Why? its because we forgot to modify path for SQLAGENT.OUT. Since Shared Disks are offline now, how can we find this path?
+  4. There are 2 ways
+     - Validate [Registry](https://www.sqlservercentral.com/blogs/working-with-the-registry-from-within-sql-server). You can directly chagne the registry entry and issue wil get fixed
+     - Check using SQL Server [Query](https://www.mssqltips.com/sqlservertip/3093/how-to-change-the-sql-server-agent-log-file-path/). Execute the mentioned commands in this blog to fix the issue
