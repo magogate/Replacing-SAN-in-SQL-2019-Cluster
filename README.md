@@ -91,7 +91,7 @@ In this video series, we will see how to analyze and metigate the impact, if we 
   
 #### Changing MDF & LDF files of User Databases
   1. Find out logical file name and path of existing database
-     - SELECT  DatabaseName = d.name
+     ``` SELECT  DatabaseName = d.name
         , DatabaseState = d.state_desc
         , FileName = mf.name
         , FileState = mf.state_desc
@@ -101,6 +101,7 @@ In this video series, we will see how to analyze and metigate the impact, if we 
         WHERE 1=1
         ORDER BY d.name
           , mf.name;
+     ```
   2. Change path of MDF & LDF file with alter command
     - ALTER DATABASE HR
         MODIFY FILE ( NAME = HR,
