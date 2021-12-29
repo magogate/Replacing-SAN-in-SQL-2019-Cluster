@@ -104,7 +104,7 @@ In this video series, we will see how to analyze and metigate the impact, if we 
           , mf.name;
      ```
   2. Change path of MDF & LDF file with alter command
-    ```
+      ``` 
         ALTER DATABASE HR
         MODIFY FILE ( NAME = HR,
         FILENAME = 'F:\MSSQL\SQLData\HR.mdf');
@@ -113,18 +113,17 @@ In this video series, we will see how to analyze and metigate the impact, if we 
       ALTER DATABASE HR
       MODIFY FILE ( NAME = HR,
       FILENAME = 'F:\MSSQL\SQLLog\HR.ldf');
-      GO
-      
-    ```
+      GO      
+      ```
   3. Bring database offline
-    ```
-     ALTER DATABASE HR SET OFFLINE;
-       GO    
-    ```
+      ```
+        ALTER DATABASE HR SET OFFLINE;
+        GO    
+      ```
   5. Move the physical files
   6. Bring database online
-    ```
-      ALTER DATABASE HR SET ONLINE;
-       GO
-    ```  
+      ```
+        ALTER DATABASE HR SET ONLINE;
+        GO
+      ```  
       
