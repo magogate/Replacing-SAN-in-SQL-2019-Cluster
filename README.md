@@ -162,7 +162,7 @@ In this video series, we will see how to analyze and metigate the impact, if we 
   4. Move the physical files 
   5. Try to bring the service online? it won't come online and it fails. 
   6. Check the error logs to understand why it fails? How to get the error logs? you will find the path in Startup Parameters of Sql Server Service.
-  7. Change the startup parameters
+  7. Change the startup parameters<br>
       OLD
       ```
         -dG:\MSSQL15.SQL2019\MSSQL\DATA\master.mdf
