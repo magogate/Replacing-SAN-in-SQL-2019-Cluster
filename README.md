@@ -130,3 +130,34 @@ In this video series, we will see how to analyze and metigate the impact, if we 
 
 ### 2. Changing MDF & LDF files of System Databases (excluding master)
   Follow exact same steps which we did for User databases, but since we can't take individual databases offline, we have to re-start the service. Note - There will be a downtime due to this activity.
+
+
+### 3. Changing MDF & LDF files of master database
+  1. Find out logical file name and path of existing database
+     ``` 
+        SELECT  DatabaseName = d.name
+        , DatabaseState = d.state_desc
+        , FileName = mf.name
+        , FileState = mf.state_desc
+        , FilePath = mf.physical_name
+        FROM sys.master_files mf 
+          INNER JOIN sys.databases d ON mf.database_id = d.database_id
+        WHERE 1=1
+        ORDER BY d.name
+          , mf.name;
+     ```
+  2. Change path of MDF & LDF file with alter command
+      ``` 
+        ALTER DATABASE master
+        MODIFY FILE ( NAME = master,
+        FILENAME = 'Y:\MSSQL\DATA\master.mdf');
+        GO
+    
+        ALTER DATABASE master
+        MODIFY FILE ( NAME = mastlog,
+        FILENAME = 'Z:\MSSQL\LOG\mastlog.ldf');
+        GO      
+      ```
+  3. As we observed for other system databases, even master database we can't bring offline individually. Hence, let's try to stop the service
+  4. Move the physical files 
+  5. Try to bring the service online?
