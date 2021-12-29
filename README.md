@@ -91,7 +91,8 @@ In this video series, we will see how to analyze and metigate the impact, if we 
   
 #### Changing MDF & LDF files of User Databases
   1. Find out logical file name and path of existing database
-     ``` SELECT  DatabaseName = d.name
+     ``` 
+        SELECT  DatabaseName = d.name
         , DatabaseState = d.state_desc
         , FileName = mf.name
         , FileState = mf.state_desc
@@ -103,7 +104,8 @@ In this video series, we will see how to analyze and metigate the impact, if we 
           , mf.name;
      ```
   2. Change path of MDF & LDF file with alter command
-    - ALTER DATABASE HR
+    ```
+        ALTER DATABASE HR
         MODIFY FILE ( NAME = HR,
         FILENAME = 'F:\MSSQL\SQLData\HR.mdf');
         GO
@@ -112,12 +114,17 @@ In this video series, we will see how to analyze and metigate the impact, if we 
       MODIFY FILE ( NAME = HR,
       FILENAME = 'F:\MSSQL\SQLLog\HR.ldf');
       GO
+      
+    ```
   3. Bring database offline
-    - ALTER DATABASE HR SET OFFLINE;
+    ```
+     ALTER DATABASE HR SET OFFLINE;
        GO    
+    ```
   5. Move the physical files
   6. Bring database online
-    - ALTER DATABASE HR SET ONLINE;
+    ```
+      ALTER DATABASE HR SET ONLINE;
        GO
-      
+    ```  
       
