@@ -121,7 +121,8 @@ In this video series, we will see how to analyze and metigate the impact, if we 
         GO    
       ```
   5. Move the physical files
-  6. Bring database online
+  6. Grant access to new folder structure
+  7. Bring database online
       ```
         ALTER DATABASE HR SET ONLINE;
         GO
