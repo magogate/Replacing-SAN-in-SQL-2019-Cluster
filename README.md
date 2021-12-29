@@ -176,3 +176,14 @@ In this video series, we will see how to analyze and metigate the impact, if we 
         -lZ:\MSSQL\LOG\mastlog.ldf
       ```
    8. Change the Default Location of MDF and LDF files
+
+### 4. Removing SQL Server Cluster dependancies from old SAN
+  1. Validate if all sql 2019 services are running 
+  2. To remove shared drives dependacy from SQL Cluster - Open "Failover Cluster Manager"
+  3. Click on Roles --> SQL Server (SQL2019)
+  4. At bottom panel select the Shared Disk which you want to take offline
+  5. Moment you take the disk offline, SQL Server Serivce will also go down
+  6. Right click on "SQL Server (SQL 2019)" under "Other Resources" section
+  7. Go to Dependancy tab - and remove disk which are not needed anymore
+  8. Now, try to take Shared Disks offline, and all should work.
+  9. Once offline, right click on the disk --> Remove it from SQL Server (SQL2019)
