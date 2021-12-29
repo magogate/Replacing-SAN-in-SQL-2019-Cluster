@@ -160,4 +160,18 @@ In this video series, we will see how to analyze and metigate the impact, if we 
       ```
   3. As we observed for other system databases, even master database we can't bring offline individually. Hence, let's try to stop the service
   4. Move the physical files 
-  5. Try to bring the service online?
+  5. Try to bring the service online? it won't come online and it fails. 
+  6. Check the error logs to understand why it fails? How to get the error logs? you will find the path in Startup Parameters of Sql Server Service.
+  7. Change the startup parameters
+      OLD
+      ```
+        -dG:\MSSQL15.SQL2019\MSSQL\DATA\master.mdf
+        -eG:\MSSQL15.SQL2019\MSSQL\Log\ERRORLOG
+        -lG:\MSSQL15.SQL2019\MSSQL\DATA\mastlog.ldf
+      ```
+      NEW
+      ```
+        -dY:\MSSQL\DATA\master.mdf
+        -eZ:\MSSQL\LOG\ERRORLOG
+        -lZ:\MSSQL\LOG\mastlog.ldf
+      ```
