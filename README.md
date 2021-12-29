@@ -195,3 +195,13 @@ In this video series, we will see how to analyze and metigate the impact, if we 
   4. There are 2 ways
      - Validate [Registry](https://www.sqlservercentral.com/blogs/working-with-the-registry-from-within-sql-server). You can directly chagne the registry entry and issue wil get fixed
      - Check using SQL Server [Query](https://www.mssqltips.com/sqlservertip/3093/how-to-change-the-sql-server-agent-log-file-path/). Execute the mentioned commands in this blog to fix the issue
+
+
+### 6. Changing Quorum Drive
+  1. After moving MDF & LDF files of all databases along with SQLAGENT.OUT file path, only pending thing now is Quorum Drive
+  2. Open "Failover Cluster Manager" --> Select Win Cluster - WinServerCluster.gogates.local
+  3. Right Click --> More Actions --> Configure Cluster Quorum Settings
+  4. On new window - "Select Quorum Configuration Option" --> "Select the quorum witness" (To add or change the quorum witness disk)
+  5. Configure a disk witness
+  6. Select the new quorum disk --> Next
+  7. Finish
